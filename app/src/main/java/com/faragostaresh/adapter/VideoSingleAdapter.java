@@ -54,7 +54,7 @@ public class VideoSingleAdapter extends RecyclerView.Adapter<VideoSingleAdapter.
         holder.imageView.setImageUrl(singelVideo.getLargeUrl(), imageLoader);
 
         holder.textViewTitle.setText(singelVideo.getTitle());
-        holder.textViewHash.setText(singelVideo.getVideoQmeryHash());
+        holder.textViewQmeryDirect.setText(singelVideo.getQmeryDirect());
         //holder.textViewVideoUrl.setText(String.valueOf(singelVideo.getVideoUrl()));
 
         // Set click
@@ -69,14 +69,14 @@ public class VideoSingleAdapter extends RecyclerView.Adapter<VideoSingleAdapter.
     class ViewHolder extends RecyclerView.ViewHolder{
         public NetworkImageView imageView;
         public TextView textViewTitle;
-        public TextView textViewHash;
+        public TextView textViewQmeryDirect;
         //public TextView textViewVideoUrl;
 
         public ViewHolder(View itemView) {
             super(itemView);
             imageView = (NetworkImageView) itemView.findViewById(R.id.imageViewVideo);
             textViewTitle = (TextView) itemView.findViewById(R.id.textViewTitle);
-            textViewHash = (TextView) itemView.findViewById(R.id.textViewHash);
+            textViewQmeryDirect = (TextView) itemView.findViewById(R.id.textViewQmeryDirect);
             //textViewVideoUrl= (TextView) itemView.findViewById(R.id.textViewVideoUrl);
         }
     }

@@ -89,6 +89,8 @@ public class VideoSingleActivity extends AppCompatActivity {
                             String mime = "text/html";
                             String encoding = "utf-8";
                             String html = "<div id='player'></div><script type='text/javascript' src='http://qp-bin.k-cdn.net/stable/qplayer.js'></script><script type='text/javascript'>var url = 'http://www.qmery.com/video/" +  json.getString(Config.TAG_QMERY_HASH) + ".json';var playerinstance=qplayer('player');playerinstance.setup(url);</script>";
+//qmeryDirect
+
                             WebView playerWebView = (WebView) findViewById(R.id.playerWebView);
                             playerWebView.clearCache(true);
                             playerWebView.clearHistory();
@@ -96,7 +98,7 @@ public class VideoSingleActivity extends AppCompatActivity {
                             playerWebView.getSettings().setDomStorageEnabled(true);
                             playerWebView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
                             playerWebView.getSettings().setMediaPlaybackRequiresUserGesture(false);;
-                            playerWebView.loadDataWithBaseURL(null, html, mime, encoding, null);
+                            playerWebView.loadUrl(json.getString(Config.TAG_QMERY_DIRECT));
 
                         } catch (JSONException e) {
                             e.printStackTrace();

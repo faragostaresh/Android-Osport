@@ -140,7 +140,7 @@ public class Video {
         this.largeUrl = largeUrl;
     }
 
-    public String geQmeryDirect() {
+    public String getQmeryDirect() {
         return qmeryDirect;
     }
 

@@ -21,6 +21,7 @@ public class Config {
 
     public static final String TAG_QMERY_HASH = "video_qmery_hash";
     public static final String TAG_QMERY_ID = "video_qmery_id";
+    public static final String TAG_QMERY_DIRECT = "qmeryDirect";
 
 
 }
